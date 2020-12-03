@@ -28,13 +28,6 @@
           );
         },
       });
-
-      let assets = document.querySelector("a-assets");
-      let loader = document.getElementById("loader");
-      assets.addEventListener("loaded", loadedHandler);
-      function loadedHandler() {
-        loader.style.display = "none";
-      }
     </script>
   </head>
 
@@ -96,5 +89,13 @@
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
     </div>
+    <script>
+      let assets = document.querySelector("a-assets");
+      let loader = document.getElementById("loader");
+      assets.addEventListener("loaded", loadedHandler);
+      function loadedHandler() {
+        loader.style.display = "none";
+      }
+    </script>
   </body>
 </html>
