@@ -6,13 +6,6 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <script>
-      let assets = document.querySelector("a-assets");
-      let loader = document.getElementById("loader");
-      assets.addEventListener("loaded", loadedHandler);
-      function loadedHandler() {
-        loader.style.display = "none";
-      }
-
       AFRAME.registerComponent("videohandler", {
         init: function () {
           var marker = this.el;
@@ -35,6 +28,13 @@
           );
         },
       });
+
+      let assets = document.querySelector("a-assets");
+      let loader = document.getElementById("loader");
+      assets.addEventListener("loaded", loadedHandler);
+      function loadedHandler() {
+        loader.style.display = "none";
+      }
     </script>
   </head>
 
