@@ -19,6 +19,7 @@ body {
   width: 80%;
   padding: 20px;
   border-radius: 20px;
+  border: solid 0.5px gray;
 }
 
 .popUp h1{
