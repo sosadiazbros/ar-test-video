@@ -81,6 +81,7 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+
     <div id="loader" class="sk-chase">
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
@@ -89,30 +90,33 @@
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
     </div>
-    
-    <div class="popUp" id="testButton">
+
+    <div class="popUp" id="popUp">
+      <img src="./assets/images/logo.png"/>
       <h1>Bienvenido</h1>
       <p>A continuación encontrará los pasos para vivir la experiencia en realidad aumentada: </p>
       <ul>
         <li>Aceptar permisos para uso de cámara</li>
         <li>Apuntar con la cámara al marcador</li>
       </ul>
-      <button >Aceptar</button>
+      <img src="./assets/images/marker.jpeg"/>
+      <button id="popUpButton">Aceptar</button>
     </div>
     <script>
       let assets = document.querySelector("a-assets");
       let loader = document.getElementById("loader");
-      let btn = document.getElementById("testButton");
+      let btn = document.getElementById("popUpButton");
+      let popUp = document.getElementById("popUp");
 
       assets.addEventListener("loaded", loadedHandler);
-      btn.addEventListener("click", closeButton);
+      btn.addEventListener("click", closePopUp);
 
       function loadedHandler() {
         loader.style.display = "none";
       }
 
-      function closeButton() {
-        btn.style.display = "none";
+      function closePopUp() {
+        popUp.style.display = "none";
       }
     </script>
   </body>
