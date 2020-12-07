@@ -89,12 +89,21 @@
       <div class="sk-chase-dot"></div>
       <div class="sk-chase-dot"></div>
     </div>
+    <button id="testButton" class="button">Test Button</button>
     <script>
       let assets = document.querySelector("a-assets");
       let loader = document.getElementById("loader");
+      let btn = document.getElementById("testButton");
+
       assets.addEventListener("loaded", loadedHandler);
+      btn.addEventListener("click", closeButton);
+
       function loadedHandler() {
         loader.style.display = "none";
+      }
+
+      function closeButton() {
+        btn.style.display = "none";
       }
     </script>
   </body>
